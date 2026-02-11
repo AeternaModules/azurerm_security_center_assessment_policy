@@ -1,6 +1,6 @@
-variable "security_center_assessment_policys" {
+variable "security_center_assessment_policies" {
   description = <<EOT
-Map of security_center_assessment_policys, attributes below
+Map of security_center_assessment_policies, attributes below
 Required:
     - description
     - display_name
@@ -19,7 +19,7 @@ EOT
     categories              = optional(set(string))
     implementation_effort   = optional(string)
     remediation_description = optional(string)
-    severity                = optional(string, "Medium")
+    severity                = optional(string) # Default: "Medium"
     threats                 = optional(set(string))
     user_impact             = optional(string)
   }))

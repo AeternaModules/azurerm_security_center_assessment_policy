@@ -1,5 +1,5 @@
-resource "azurerm_security_center_assessment_policy" "security_center_assessment_policys" {
-  for_each = var.security_center_assessment_policys
+resource "azurerm_security_center_assessment_policy" "security_center_assessment_policies" {
+  for_each = var.security_center_assessment_policies
 
   description             = each.value.description
   display_name            = each.value.display_name
