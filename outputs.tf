@@ -1,3 +1,7 @@
+output "security_center_assessment_policies_id" {
+  description = "Map of id values across all security_center_assessment_policies, keyed the same as var.security_center_assessment_policies"
+  value       = { for k, v in azurerm_security_center_assessment_policy.security_center_assessment_policies : k => v.id }
+}
 output "security_center_assessment_policies_categories" {
   description = "Map of categories values across all security_center_assessment_policies, keyed the same as var.security_center_assessment_policies"
   value       = { for k, v in azurerm_security_center_assessment_policy.security_center_assessment_policies : k => v.categories }
